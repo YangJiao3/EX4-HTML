@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vrooom — Barracuda X10</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background-image: url('assets/mercedes-vision-avtr.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+      z-index: 0;
+    }
+
+    .hero-logo {
+      position: absolute;
+      left: 2px;
+      width: 30%;
+      transform: rotate(-8deg);
+      z-index: 1;
+    }
+
+    .hero-logo img {
+      width: 100%;
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 3%;
+      left: 5%;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-left: 6px solid #f6e3b4;
+      border-radius: 10px;
+      backdrop-filter: blur(1px);
+      z-index: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 3em;
+      color: #a0fcf7;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 1.2em;
+      color: #fff;
+    }
+
+    .hero-video {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      width: 35%;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+      z-index: 1;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .hero-video video {
+      width: 100%;
+      display: block;
+    }
+
+    .hero-video:hover {
+      transform: scale(1.3);
+    }
+
+    .card-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 10%;
+      background-color: #ffffff;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      padding: 20px;
+      width: calc(33.33% - 40px);
+      min-width: 240px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #003566;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      color: #444;
+    }
+
+    .form-section {
+      padding: 40px 10%;
+      background-color: #f4f4f4;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+    }
+
+    form button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #003566;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #003566;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text {
+        position: static;
+        margin: 20px auto;
+        background: rgba(0,0,0,0.7);
+        text-align: center;
+      }
+
+      .hero-video {
+        position: static;
+        width: 90%;
+        margin: 20px auto;
+      }
+
+      .card-section {
+        padding: 30px 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-logo">
+    <img src="assets/logo-enh.png" alt="Vrooom Logo">
+  </div>
+  <div class="hero-text">
+    <h1>Mercedes Vision AVTR</h1>
+    <p>A marriage between art and science.</p>
+  </div>
+  <div class="hero-video">
+    <video autoplay loop muted>
+      <source src="assets/avtr-demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<section class="card-section">
+  <div class="card">
+    <h3>Top Speed</h3>
+    <p>Reaches up to 220mph on open track with aerodynamic support.</p>
+  </div>
+  <div class="card">
+    <h3>Acceleration</h3>
+    <p>0 to 60mph in just 3.0 seconds. The surge you feel is real.</p>
+  </div>
+  <div class="card">
+    <h3>Eco Mode</h3>
+    <p>Fuel-efficient and clean in city mode — go fast and green.</p>
+  </div>
+  <div class="card">
+    <h3>Smart Interior</h3>
+    <p>Voice assistant, panoramic HUD, memory seats, and climate AI.</p>
+  </div>
+  <div class="card">
+    <h3>AI Drive</h3>
+    <p>Adaptive cruise, lane sensing, and environment-aware AI control.</p>
+  </div>
+  <div class="card">
+    <h3>BioSync</h3>
+    <p>Car learns your mood, plays ambient sounds, adjusts lights.</p>
+  </div>
+</section>
+
+<section class="form-section">
+  <h2 style="text-align:center;">Book a Test Drive</h2>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone">
+
+    <label for="message">Any message or questions:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Vrooom Automotive. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
